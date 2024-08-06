@@ -2,503 +2,416 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-  <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-   
-  .header{
-    width: 100%;
-    height: 100vh;
-    background-image:linear-gradient(rgba(0,168,255,0.3),rgba(0,168,255,0.3)) url('') ;
-    background-repeat:no-repeat ;
-    background-size: 100% 100%;
-    position: relative;
-    clip-path: polygon(100% 0%, 100% 75%, 50% 100%,0% 75%, 0 0);
-  }
-  .header::before{
-    contain:"" ;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    opacity: .3;
-    z-index: -1;
-    background-color: linear-gradient(to right,#1e5799 0%,#3ccdbb, #16c9f6 10%);
-  }
-  .navbar{
-    contain: "";
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    opacity: .3;
-    z-index: -1;
-    background-color: linear-gradient(to right,#1e5799 0%,#3ccdbb, #16c9f6 10%);
-  }
-  .project-work{
-    margin: 100px 0;
-  }
-  .project-work h1{
-    font-size: 2rem;
-    text-align: center;
-  }
-  .pricing{
-    width: 100%;
-    height: 100vh;
-    padding: 50px;
-    position: relative;
-  }
-  .pricing:before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-color: linear-gradient(160deg, #16c9f6 55%,#fff 0% );
-  }
-  .money{
-    font-size: 40px;
-    line-height: 1;
-    color: #606060;
-  }
-  .card{
-    transition: 0.4s ease;
-  }
-  .card-header{
-    font-size: 1.6rem;
-    font-weight: bold;
-    background: #fff !important;
-    padding: 30px 0 !important;
-  }
-  .card-body{
-    padding: 30px 0px !important;
-  }
-  .card-body li{
-    margin: 10px 0;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #606060;
-  }
-  .card-footer{
-    background: white !important;
-    padding: 30px 0px !important;
-  }
-  .header-buttons a{
-    border: 1px solid #50d150;
-    border-radius: 100px;
-    margin: 0 5px;
-    padding: 12px 35px;
-    outline: none;
-    color: #50d150;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height:1.4 ;
-    text-align: center;
-  }
-  .card-footer a:hover{
-color: #fff;
-background:#50d150 ;
-text-decoration: none;
-box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
-  }
-  .card:hover{
-    transform: translateY(-20px);
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
-  }
-  .card:hover .card-header .card:hover .money{
-    color: #50d150;
-  }
-  .happyclients{
-    width: 100%;
-    height: 100vh;
-    padding: 80px;
-  }
-  .box{
-    text-align: center;
-    border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
-    border-radius: 2px;
-    transition: 0.3s ease;
-  }
-  .box:hover{
-    background: #16c9f6;
-  }
-  .box:hover p{
-    color: #fff;
-  }
-  .carousel-indicators{
-    position: absolute;
-    right: 0;
-    bottom: -60px !important;
+        *{
+            margin: 0;
+            font-family: Arial,;
+            border: border-box;
+        }
+        .navbar{
+            height: 60px;
+            background-color: #0f1111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .nav-logo{
+            height: 50px;
+            width: 100px;
+        }
 
-  }
-  .carousel-indicators li{
-    background-color: #16c9f6 !important;
-  }
-  .box a{
+
+        .logo{
+            background-image: url("/amz.png");
+            background-size: cover;
+            height: 50px;
+            width: 100%;
+        }
+        .border{
+            border: 2px solid transparent;
+        }
+        .border:hover{
+            border: 2px solid white;
+        }
+        /*
+        second
+        */
+        .add-first{
+            color: #cccccc;
+            font-size: 0.85rem;
+            margin-left: 15px;
+        }
+      .add-second{
+        font-size: 1rem;
+        margin: 3px;
+      }
+      .add-icon{
+        display: flex;
+        align-items: center;
+      }
+      /*third */
+      .nav-search{
+          display: flex;
+          justify-content: space-evenly;
+          
+         width: 620px;
+         height: 40px;
+         
+      }
+      .search-select{
+       background-color:#f3f3f3;
+       width: 50px;
+       text-align: center;
+       border-top-left-radius:4px ;
+       border-bottom-left-radius: 4px;
+       border: none;
+       background: #ffc800;
+      }
+      .search-input{
+        width: 100%;
+        font-size: 1rem;
+        border: none;
+      }
+      .search-icon{
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        border-top-right-radius:4px ;
+         border-bottom-right-radius: 4px;
+         background-color: #ffc800;
+         color: #0f1111;}
+
+         .nav-search:hover{
+        border: 2px solid orange;
+         }
+        
+      
+      /*four*/
+         .span{
+            font-size: 0.7rem;
+         }
+
+      .nav-second{
+        font-size: 0.85rem;
+        font-weight: 700;
+
+      }
+      /*five*/
+     .nav-cart i{
+        font-size:30px ;
+     }
+     .nav-cart{
+        font-size: 0.85rem;
+        font-weight: 700;
+     }
+      /*new*/
+       .panel{
+        height: 40px;
+        background-color: #222f3d;
+        display: flex;
+        color: #cccccc;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       
+    .panel-ops p{
+    display: inline;
+    margin: 15px;
+   color: white;
+    }
+    .panel-ops{
+        width: 70%;
+        font-size: 0.85rem;
+      
+    }
+    .panel-deals{
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+    /* herosection*/
+    .hero-section{
+        background-image: url("imz1.jpg");
+        height: 400px;
+        background-size: cover;
+        justify-content: center;
+        display: flex;
+        align-items: flex-end;
+    }
+    .hero-msg{
+        background-color: black;
+        background-color: white;
+        height: 40px;
+        display: flex;
+        align-items: center;
+      justify-content: center;
+      font-size: 0.85;
+      width: 80%;
+      margin-bottom: 25px;
+    }
+    .hero-msg a{
+        color:#007185 ;
+    }
+    /* shop-section*/
+    .shop-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #e8ebf6;
+    }
+    .box{
+     /*
+     border: 2px solid black;*/
+     height: 400px;
+     width: 23%;
+     background-color: white;
+     padding: 20px 0px 15px;
+     margin-top: 15px;
+    }
+    .box-img{
+       
+        height: 300px;
+        background-image: contain;
+        margin-top: 1rem;
+     margin-bottom: 1rem;
+    }
+    .box-content{
+        margin-left: 10px;
+        margin-right:1rem ;
+    }
+    .box-content p{
+        color:#222f3d ;
+    }
+
+    /* footer*/
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .footer {
+    background-color: #8b9bf2;
+    padding: 20px 0;
+    text-align: center;
     position: relative;
-  }
-.box a img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
-.box h1{
-  font-size: 13px;
-  font-size: 700;
-  color: #000;
-  margin-bottom: 10px;
+
+.footer-content {
+    display: flex;
+justify-content: space-evenly;
+   
+    max-width: 800px;
+    margin: 0 auto;
 }
-.box h2{
-  font-size: 13px;
-  font-weight: 400;
-  color: #666666;
-  margin-bottom: 20px;
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #04020e;;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+ul,li{
+    list-style: none;}
+    
+p{
+    color:#0f1111;
+    text-decoration-style: initial;
+
 }
     </style>
 </head>
 <body>
-    <div class="header" id="topheader">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container text-uppercase">
-
-        
-        <a class="navbar-brand font-weight-bold text-white" href="#">AKASH WEB</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Service</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Price</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-           
-           
-          </ul>
-        
-        </div>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+             </div>
+<div class="nav-address border">
+    <p class="add-first">deliver to</p>
+   <div class="add-icon">
+    <i class="fa-solid fa-location-dot"></i>
+    <p class="add-second">india</p>
+   </div>
+</div>
+<div class="nav-search">
+    <select  class="search-select">
+        <option value="All">All</option>
+    </select>
+    <input type="text" placeholder="search amazon" class="search-input">
+    <div class="search-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
     </div>
-      </nav>
-      <section class="header-section">
-        <div class="center-div">
-          <h1 class="font-weight-bold">we are The Web Devloper </h1>
-          <p>we creat the world best websites</p>
-          <div class="header-buttons">
-            <a href="#">aboutus</a>
-            <a href="#">Contact</a>
+</div>
+
+<div class="nav-singin  border">
+    <p><span>Hello,Sing In</span></p>
+    <p class="nav-second">Accont & List</p>
+</div>
+<div class="nav-returns border ">
+    <p><span>Returns</span></p>
+    <p class="nav-second">& oders</p>
+</div>
+<div class="nav-cart border">
+    <i class="fa-solid fa-cart-shopping"></i>
+</div>
+</div>
+
+   <div class="panel">
+    <div class="panel-all">
+        <i class="fa-solid fa-bars"></i>All
+        
+        
+    </div>
+    <div class="panel-ops">
+        <p>Todays Deals</p>
+        <p>customer service</p>
+        <p>Registry</p>
+        <p>Sell</p>
+    </div>
+   <div class="panel-deals">
+ shope deal in Electronics
+   </div>
+   </div>
+    
+</header>
+    <div class="hero-section">
+ <div class="hero-msg">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit sint in magnam!</p><a> click here to go amazon.in</a>
+ </div>
+    </div>
+    
+    <div class="shop-section">
+        <div class="box1 box" >
+            <div class="box-content">
+                 <h2>Revamp your home in style</h2>
+                 
+        <div class="box-img"style="background-image:url('imz2.jpg');"> </div>
+            <p class="">see more</p>
+       
+    </div>
+</div>
+
+        <div class="box2 box ">
+             <div class="box-content">
+                <h2>Shop unique Handmade items</h2>
+       <div class="box-img"style="background-image:url('im2.jpg');"></div>
+       <p class="">see more</p>
+   </div>
+    </div>
+        <div class="box3 box">
+             <div class="box-content">
+            <h2>Level up your gaming</h2>
+   <div class="box-img"style="background-image:url('im3.jpg');"></div>
+   <p class="">see more</p>
+</div>
+</div>
+        <div class="box4 box"> <div class="box-content">
+            <h2>Fantastic Finds for Home</h2>
+   <div class="box-img"style="background-image:url('im4.jpg');"></div>
+   <p class="">see more</p>
+</div>
+</div>
+<div class="box1 box" >
+    <div class="box-content">
+         <h2>Revamp your home in style</h2>
+         
+<div class="box-img"style="background-image:url('imz2.jpg');"> </div>
+    <p class="">see more</p>
+
+</div>
+</div>
+
+<div class="box2 box ">
+     <div class="box-content">
+        <h2>Shop unique Handmade items</h2>
+<div class="box-img"style="background-image:url('im2.jpg');"></div>
+<p class="">see more</p>
+</div>
+</div>
+<div class="box3 box">
+     <div class="box-content">
+    <h2>Level up your gaming</h2>
+<div class="box-img"style="background-image:url('im3.jpg');"></div>
+<p class="">see more</p>
+</div>
+</div>
+<div class="box4 box"> <div class="box-content">
+    <h2>Fantastic Finds for Home</h2>
+<div class="box-img"style="background-image:url('im4.jpg');"></div>
+<p class="">see more</p>
+</div>
+</div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
             
+            <div class="footer-links">
+                <h3><span> Get to Know Us</span> </h3>
+                <ul>
+               <li><a href="#">About us</a></li> 
+               <li> <a href="#">Careers</a></li>
+               <li><a href="#">press  releases</a></li> 
+               <li><a href="#">amazon scince</a></ul></li> 
+               
+                <a href="#">How Search works</a>
+            </div>
+            <div class="footer-links">
+                <h3><span>Connect with Us</span> </h3>
+                <ul>
+               <li><a href="#">Facebook</a></li> 
+               <li> <a href="#">Twitter</a></li>
+               <li><a href="#">Instagram</a></li> 
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3><span>Make Money with Us</span> </h3>
+                <ul>
+               <li><a href="#">Sell on Amazon</a></li> 
+               <li> <a href="#">Sell under Amazon Accelerator </a></li>
+               <li><a href="#">protect and Build Your Brand</a></li> 
+               <li><a href="#"> Amazon Globle Selling</a></li> 
+               <li> <a href="#"> Become and Affiliate</a></li>
+               <li><a href="#"> Fullfilment Amazon</a></li>
+                 <li><a href="#">Advertise Your Product</a></li> 
+               <li> <a href="#">Amazon Pay on Marchant</a></li> 
+                </ul>
 
-          </div>
-
-        </div>
-
-
-      </section>
-    </div>
-<section class="header-extradiv">
-  <div class="container">
-  <div class="row">
-  <div class="col-lg-4 col-12">
-
-  </div>
-</div>
-</div>
-</section>
-
-
-
-<section class="project-work">
-  <div class="container heading text-center">
-    <p class="text-center font-weight-bold"> MORE THEN 2,000 WEBSITES CREATS</p>
-
-  </div>
-  <div class="container  d-flex justify-content-around align-item-center text-center">
-     <div>
-      <h1>1500</h1>
-      <p>cms installation</p>
-     </div>
-
-     <div>
-      <h1>2500</h1>
-      <p>Aword won</p>
-     </div>
-     
-     <div>
-      <h1>700</h1>
-      <p>happy clients</p>
-     </div>
-     <div>
-      <h1>500</h1>
-      <p>working on</p>
-     </div>
-  </div>
-
-</section>
-<section class="Pricing" id="Pricingdiv">
-<div class="container headings text-center">
-<h1 class="text-center font-weight-bold text-white"> OUR BEST PRICING</h1>
-
-</div>
-<div class="container">
-<div class="row">
-<div class="col-lg-4 col-12">
-  <div class="card text-center">
-    <div class="card-header">BASIC</div>
-    <div class="card-body">
-      <li> $<span>20</span>/websites</li>
-      <li> Responsive websites</li>
-      <li>Domain name free </li>
-      <li>Mobile friendly</li>
-      <li> Webmail support</li>
-      <li>Customer support 24/7</li>
-    </div>
-    <div class="card-footer">
-      <a href="#">purchase</a>
-    </div>
-  </div>
-
-</div>
-
-<div class="col-lg-4 col-12">
-  <div class="card text-center">
-    <div class="card-header">BASIC</div>
-    <div class="card-body">
-      <li> $<span>40</span>/websites</li>
-      <li> Responsive websites</li>
-      <li>Domain name free </li>
-      <li>Mobile friendly</li>
-      <li> Webmail support</li>
-      <li>Customer support 24/7</li>
-    </div>
-    <div class="card-footer">
-      <a href="#">purchase</a>
-    </div>
-  </div>
-
-
-
-</div>
-
-<div class="col-lg-4 col-12">
-<div class="card text-center">
-  <div class="card-header">BASIC</div>
-  <div class="card-body">
-    <li> $<span>60</span>/websites</li>
-    <li> Responsive websites</li>
-    <li>Domain name free </li>
-    <li>Mobile friendly</li>
-    <li> Webmail support</li>
-    <li>Customer support 24/7</li>
-  </div>
-  <div class="card-footer">
-    <a href="#">purchase</a>
-  </div>
-</div>
-
-
-
-</div>
-</section>
-
-<section class="happyclients">
-  <div class="container heading text-center">
-<h1 class="text-center font-weight-bold">OUR HAPPY CLIENTS</h1>
-<p class="text-capitalize pt-1">Our Satisfied Customer Says</p>
-
-</div>
-<div class="container mt-3">
-
-  <h2>Carousel</h2>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ul>
-    
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-       <div class="row">
-       <div class="col-lg-4 col-md-4 col-12">
-<div class="box">
-  <a href="#"><img src="" alt=""></a>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-  <h1>vinod thapa</h1>
-  <h2>web devloper</h2>
-</div>
-       </div>
-      
-       <div class="col-lg-4 col-md-4 col-12">
-        <div class="box">
-          <a href="#"><img src="" alt=""></a>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-          <h1>vinod thapa</h1>
-          <h2>web devloper</h2>
-        </div>
-               </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3><span>Let Us Help You</span> </h3>
+                <ul>
+               <li><a href="#">COVID-19 And Amazon</a></li> 
+               <li> <a href="#">Your Account </a></li>
+               <li><a href="#">Return Center</a></li> 
+               <li><a href="#"> Recall And Product Safety Alert</a></li> 
+               <li> <a href="#">100% Purchase Protaction</a></li>
+               <li><a href="#"> Amazon App Download</a></li>
+                 <li><a href="#">HELP</a></li> 
               
-               <div class="col-lg-4 col-md-4 col-12">
-                <div class="box">
-                  <a href="#"><img src="" alt=""></a>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-                  <h1>vinod thapa</h1>
-                  <h2>web devloper</h2>
-                </div>
-                       </div>
-                       </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-12">
-   <div class="box">
-     <a href="#"><img src="" alt=""></a>
-     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-     <h1>vinod thapa</h1>
-     <h2>web devloper</h2>
-   </div>
-          </div>
-         
-          <div class="col-lg-4 col-md-4 col-12">
-           <div class="box">
-             <a href="#"><img src="" alt=""></a>
-             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-             <h1>vinod thapa</h1>
-             <h2>web devloper</h2>
-           </div>
-                  </div>
-                 
-                  <div class="col-lg-4 col-md-4 col-12">
-                   <div class="box">
-                     <a href="#"><img src="" alt=""></a>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-                     <h1>vinod thapa</h1>
-                     <h2>web devloper</h2>
-                   </div>
-                          </div>
-                          </div>
-         </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-12">
-   <div class="box">
-     <a href="#"><img src="" alt=""></a>
-     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-     <h1>vinod thapa</h1>
-     <h2>web devloper</h2>
-   </div>
-          </div>
-         
-          <div class="col-lg-4 col-md-4 col-12">
-           <div class="box">
-             <a href="#"><img src="" alt=""></a>
-             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-             <h1>vinod thapa</h1>
-             <h2>web devloper</h2>
-           </div>
-                  </div>
-                 
-                  <div class="col-lg-4 col-md-4 col-12">
-                   <div class="box">
-                     <a href="#"><img src="" alt=""></a>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cumque neque autem sint. Quo quaerat, explicabo ipsum sequi mollitia nemo autem, laborum, ullam placeat excepturi inventore dolor odit praesentium amet.</p>
-                     <h1>vinod thapa</h1>
-                     <h2>web devloper</h2>
-                   </div>
-                          </div>
-                          </div>
-         </div>
-    </div>
+                </ul>
+                
+            </div>
+        </div>
+    </footer>
     
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
-  
-  </div>
-  
-
-</section>
-
-<section class="CONTECT US " id="contect">
-  <div class="container heading text-center">
-<h1 class="text-center font-weight-bold">CONTECT US</h1>
-<p class="text-capitalize pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quidem? </p>
-
-</div>
-<div class="container">
-  <div class="row">
-<div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-md-2 col-1">
-
-
-  </div>
-</div>
-
- <form action="/action_page.php">
-    <div class="form-group">
-      
-      <input type="text" class="form-control" id="username"  placeholder="Enter Your Name" required autocomplete="off" id="">
-    </div>
-    <div class="form-group">
-      
-      <input type="email" class="form-control" id="email"  placeholder=" Enter Email" required autocomplete="off" id="">
-    </div>
-    <div class="form-group">
-      
-      <input type="email" class="form-control" id="email"  placeholder=" Enter Mobile Number" required autocomplete="off" id="">
-    </div>
-    
-    <div class="form-group">
-      <input type="email" class="form-control" id="email"   placeholder="Enter Your Message "required autocomplete="off" id="">
-      </div>
-      <div class="form-group">
-        <label for="comment">Comment:</label>
-        <textarea class="form-control" rows="4" id="comment"></textarea>
-      </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-
-
-
-
-
-
-     
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
